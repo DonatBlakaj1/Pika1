@@ -1,0 +1,3232 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PIKA — Workspace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ═════════ SIDEBAR ═════════ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">P</div>
+      <div class="brand-name">PIKA</div>
+      <span class="brand-badge">v3</span>
+    </div>
+
+    <div class="ws-switch">
+      <div class="ws-emoji">🏢</div>
+      <div class="ws-text">
+        <div class="ws-name">Studio Marketing AR</div>
+        <div class="ws-meta">Prishtinë · 4 user</div>
+      </div>
+      <svg class="ws-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9" stroke-width="2"/></svg>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-section">
+        <a class="nav-item active" data-panel="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" data-panel="inbox">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
+          Inbox
+          <span class="nav-dot"></span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Klientët &amp; shitje</div>
+        <a class="nav-item" data-panel="customers">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          Klientët
+          <span class="nav-count">142</span>
+        </a>
+        <a class="nav-item" data-panel="pipeline">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="9.5" y="3" width="5" height="12" rx="1"/><rect x="16" y="3" width="5" height="8" rx="1"/></svg>
+          Pipeline
+          <span class="nav-count">38</span>
+        </a>
+        <a class="nav-item" data-panel="quotes">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+          Kuotime
+          <span class="nav-count">12</span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Faturim</div>
+        <a class="nav-item" data-panel="invoices">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Fatura
+          <span class="nav-count">94</span>
+        </a>
+        <a class="nav-item" data-panel="subscriptions">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10"/><path d="M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+          Abonime
+          <span class="nav-count">28</span>
+        </a>
+        <a class="nav-item" data-panel="expenses">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          Shpenzime
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Katalogu</div>
+        <a class="nav-item" data-panel="listings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Listingjet
+          <span class="nav-count">86</span>
+        </a>
+        <a class="nav-item" data-panel="templates">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Shabllonet
+          <span class="nav-pill">68</span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Automatizimi</div>
+        <a class="nav-item" data-panel="workflows">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7.5 8l4 8M16.5 8l-4 8"/></svg>
+          Workflows
+          <span class="nav-count">14</span>
+        </a>
+        <a class="nav-item" data-panel="integrations">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Integrime
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="avatar av-indigo">AR</div>
+      <div class="user-info">
+        <div class="user-name">Ardian Rrahmani</div>
+        <div class="user-meta">Pronar</div>
+      </div>
+      <button class="icon-btn" style="width:28px;height:28px" title="Cilësimet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:14px;height:14px"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </button>
+    </div>
+  </aside>
+
+
+ 
+
+  <!-- ═════════ MAIN ═════════ -->
+  <main class="main">
+
+      <div> 
+
+<div class="sidebar-overlay"></div></div>
+    <!-- Top bar -->
+    <div class="topbar">
+      <button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+      <div class="search">
+        <svg class="s-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        
+
+        <div class="search-wrapper" id="searchWrapper">
+
+  <button class="search-btn" id="searchBtn" aria-label="Search">
+    <!-- SVG icon (profesional) -->
+
+      <path d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18zm11 3-6-6"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <input type="text" class="search-input" id="searchInput" placeholder="Search..." />
+
+</div>
+        <kbd>⌘K</kbd>
+      </div>
+
+      <div class="biz-switch" title="Lloji i biznesit">
+        <span class="emoji">🏢</span>
+        <span>Shërbime &amp; B2B</span>
+        <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9" stroke-width="2"/></svg>
+      </div>
+
+      <div class="cur-switch" title="Valuta">
+        <button class="active">EUR</button>
+        <button>ALL</button>
+      </div>
+
+      <div class="tb-actions">
+        <button class="icon-btn" title="Njoftime">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="dot"></span>
+        </button>
+        <button class="icon-btn" title="Ndihmë">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </button>
+        <div class="divider-v"></div>
+        <button class="create-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2.2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2.2"/></svg>
+          Krijo
+        </button>
+      </div>
+    </div>
+
+    <div class="page-wrap">
+
+      <!-- ════════════ DASHBOARD PANEL ════════════ -->
+      <section class="panel active" data-id="dashboard">
+        <div class="page">
+
+          <!-- Hero -->
+          <div class="dash-hero">
+            <div class="dash-greet">Mirëdita, Ardian 👋</div>
+            <div class="dash-sub">Ke 5 mesazhe të paplotësuara, 3 fatura të vonuara dhe 2 takime sot. Si ditën?</div>
+            <div class="dash-quick">
+              <button class="dash-quick-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Faturë e re
+              </button>
+              <button class="dash-quick-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Klient i ri
+              </button>
+              <button class="dash-quick-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                Dërgo WhatsApp
+              </button>
+              <button class="dash-quick-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Cakto takim
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label">
+                <span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>
+                Të ardhura mujore
+              </div>
+              <div class="stat-value">€18,420</div>
+              <div class="stat-delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>+12.4% vs Prill</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">
+                <span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Të paguara
+              </div>
+              <div class="stat-value">€14,260</div>
+              <div class="stat-delta">77 fatura · 81% rate</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">
+                <span class="stat-label-ic" style="background:var(--warning-tint);color:var(--warning)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                Në pritje
+              </div>
+              <div class="stat-value">€2,840</div>
+              <div class="stat-delta neutral">14 fatura · afati &lt; 7 ditë</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">
+                <span class="stat-label-ic" style="background:var(--danger-tint);color:var(--danger)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span>
+                Të vonuara
+              </div>
+              <div class="stat-value">€1,320</div>
+              <div class="stat-delta down">3 fatura · 7+ ditë</div>
+            </div>
+          </div>
+
+          <!-- AI banner -->
+          <div class="ai-banner">
+            <div class="ai-orb"></div>
+            <div class="ai-text">
+              <strong>PIKA Asistent:</strong> Adriatik Logistics nuk ka paguar F-0139 (€400) prej 9 ditësh. Sugjeroj të dërgoj WhatsApp kujtesë miqësore. Plus, 3 lead-e të ardhura nga IG po presin përgjigje prej 2 orësh.
+            </div>
+            <button class="btn btn-soft btn-sm">Shiko të gjitha (5)</button>
+          </div>
+
+          <div class="dash-grid">
+
+            <!-- Recent activity -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Aktiviteti i fundit</div>
+                  <div class="card-sub">Çdo gjë e rëndësishme, në një vend</div>
+                </div>
+                <button class="btn btn-ghost btn-sm">Shiko të gjitha</button>
+              </div>
+              <div class="activity-feed">
+                <div class="activity-row">
+                  <div class="act-ic payment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text"><strong>Pagesë e marrë</strong> nga Hekla Distribution për <a>F-2026-0141</a></div>
+                    <div class="act-meta">12 min · BKT Transfer · Auto-reconciled</div>
+                  </div>
+                  <div class="act-amount" style="color:var(--success)">+€7,200</div>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic message"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text"><strong>Driton K.</strong> kërkoi çmim për Plan Pro përmes WhatsApp</div>
+                    <div class="act-meta">28 min · Auto-tagged "Hot lead"</div>
+                  </div>
+                  <span class="badge badge-danger">Hot</span>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic invoice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text"><strong>F-2026-0142</strong> u fiskalizua me ATK Kosovë</div>
+                    <div class="act-meta">1h · Adriatik Logistics · Kodi <code style="font-family:var(--mono);font-size:11px">ATK-26-05-A3B9F2</code></div>
+                  </div>
+                  <div class="act-amount">€8,400</div>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic contract"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text">Kontrata "Service Agreement KS" u firmos nga <strong>Genti Beqiri</strong></div>
+                    <div class="act-meta">3h · e-Signature · IP Tiranë</div>
+                  </div>
+                  <span class="badge badge-success">Firmosur</span>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text">Lead i ri nga Instagram: <strong>@mirjeta_boutique</strong> pyet për paketën Pro</div>
+                    <div class="act-meta">5h · Klient ekzistues · upsell mundësi</div>
+                  </div>
+                  <span class="badge badge-warning">Upsell</span>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic invoice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text"><strong>Era Pharmacy</strong> rinovim afër — €400 për 5 ditë</div>
+                    <div class="act-meta">Dje · Auto-kujtesa do dërgohet me WhatsApp</div>
+                  </div>
+                  <div class="act-amount" style="color:var(--ink-soft)">€400</div>
+                </div>
+                <div class="activity-row">
+                  <div class="act-ic payment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <div class="act-body">
+                    <div class="act-text"><strong>Toskana Restaurants</strong> paguar abonim mujor (përsëritëse)</div>
+                    <div class="act-meta">Dje · Stripe · Auto-fiskalizuar</div>
+                  </div>
+                  <div class="act-amount" style="color:var(--success)">+€500</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column -->
+            <div>
+              <!-- Quick actions -->
+              <div class="qa-card">
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="card-title">Veprime të shpejta</div>
+                  <button class="btn-icon" style="width:24px;height:24px;color:var(--ink-muted)">⋯</button>
+                </div>
+                <div class="qa-list">
+                  <div class="qa-item">
+                    <div class="qa-item-ic" style="background:var(--brand-tint);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                    <div class="qa-item-text"><div class="qa-item-name">Krijo faturë</div></div>
+                    <span class="qa-item-shortcut">F</span>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-item-ic" style="background:var(--amber-tint);color:var(--amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                    <div class="qa-item-text"><div class="qa-item-name">Krijo kuotim</div></div>
+                    <span class="qa-item-shortcut">Q</span>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-item-ic" style="background:var(--success-tint);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/></svg></div>
+                    <div class="qa-item-text"><div class="qa-item-name">Shto klient</div></div>
+                    <span class="qa-item-shortcut">C</span>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-item-ic" style="background:var(--wa-tint);color:#15803D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                    <div class="qa-item-text"><div class="qa-item-name">Dërgo WhatsApp</div></div>
+                    <span class="qa-item-shortcut">W</span>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-item-ic" style="background:var(--purple-tint);color:var(--purple)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+                    <div class="qa-item-text"><div class="qa-item-name">Hap shabllonet</div></div>
+                    <span class="qa-item-shortcut">T</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Upcoming -->
+              <div class="qa-card">
+                <div class="card-title" style="margin-bottom:8px">Sot</div>
+                <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:10px;background:var(--bg-2);border-radius:var(--r-sm);border-left:3px solid var(--brand)">
+                    <div style="font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:600">10:30</div>
+                    <div style="flex:1">
+                      <div style="font-size:13px;font-weight:500">Takim me Driton K.</div>
+                      <div style="font-size:11.5px;color:var(--ink-muted);margin-top:2px">Demo · Google Meet</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:10px;background:var(--bg-2);border-radius:var(--r-sm);border-left:3px solid var(--warning)">
+                    <div style="font-family:var(--mono);font-size:11px;color:var(--warning);font-weight:600">14:00</div>
+                    <div style="flex:1">
+                      <div style="font-size:13px;font-weight:500">Dërgo F-0143 (Bardh Caffe)</div>
+                      <div style="font-size:11.5px;color:var(--ink-muted);margin-top:2px">Përsëritëse · WhatsApp auto</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:10px;background:var(--bg-2);border-radius:var(--r-sm);border-left:3px solid var(--success)">
+                    <div style="font-family:var(--mono);font-size:11px;color:var(--success);font-weight:600">16:00</div>
+                    <div style="flex:1">
+                      <div style="font-size:13px;font-weight:500">Vizitë e pronës — Genti</div>
+                      <div style="font-size:11.5px;color:var(--ink-muted);margin-top:2px">Apt. 3+1 · Lakrishte</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- This week chart -->
+              <div class="qa-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                  <div class="card-title">Java kjo</div>
+                  <span class="badge badge-success" style="font-size:10px">+18%</span>
+                </div>
+                <svg viewBox="0 0 280 100" style="width:100%;height:100px">
+                  <defs>
+                    <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,80 L40,60 L80,68 L120,40 L160,48 L200,30 L240,20 L280,12 L280,100 L0,100 Z" fill="url(#grad)"/>
+                  <path d="M0,80 L40,60 L80,68 L120,40 L160,48 L200,30 L240,20 L280,12" fill="none" stroke="#4F46E5" stroke-width="2"/>
+                  <circle cx="280" cy="12" r="4" fill="#4F46E5"/>
+                </svg>
+                <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-muted);margin-top:6px">
+                  <span>H</span><span>M</span><span>M</span><span>E</span><span>P</span><span>S</span><span>D</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- ════════════ INBOX PANEL ════════════ -->
+      <section class="panel" data-id="inbox">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Inbox</h1>
+              <p class="page-sub">WhatsApp, Instagram, Facebook, Email — të gjitha mesazhet në një vend.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Shëno të gjitha si të lexuara
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Bisedë e re
+              </button>
+            </div>
+          </div>
+
+          <!-- Channel filters -->
+          <div class="toolbar">
+            <button class="chip active">📨 Të gjitha · 24</button>
+            <button class="chip"><span style="width:12px;height:12px;background:var(--wa);border-radius:3px"></span> WhatsApp · 12</button>
+            <button class="chip"><span style="width:12px;height:12px;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);border-radius:3px"></span> Instagram · 6</button>
+            <button class="chip"><span style="width:12px;height:12px;background:#1877F2;border-radius:3px"></span> Facebook · 2</button>
+            <button class="chip"><span style="width:12px;height:12px;background:var(--info);border-radius:3px"></span> Email · 3</button>
+            <button class="chip"><span style="width:12px;height:12px;background:var(--brand);border-radius:3px"></span> Web · 1</button>
+            <button class="chip" style="margin-left:auto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+              Pa-përgjigjur
+            </button>
+          </div>
+
+          <div class="inbox-grid">
+
+            <!-- Message list -->
+            <div class="inbox-list-col">
+              <div class="inbox-filters">
+                <button class="ftab active">📥 Hyrëse</button>
+                <button class="ftab">✉️ Të dërguara</button>
+                <button class="ftab">📝 Draft</button>
+                <button class="ftab">📁 Arkivë</button>
+              </div>
+              <div class="msg-list">
+
+                <div class="msg-row unread active">
+                  <div class="msg-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">Driton K.</span>
+                      <span class="msg-time">12 min</span>
+                    </div>
+                    <div class="msg-snippet">Sa kushton paketa Pro për 5 user? Mund të caktojmë demo?</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag hot">🔥 Hot</span>
+                      <span class="msg-tag new">Lead i ri</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row unread">
+                  <div class="msg-channel ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">@mirjeta_boutique</span>
+                      <span class="msg-time">28 min</span>
+                    </div>
+                    <div class="msg-snippet">A ka edhe S në këtë model? Klienti im e dëshiron urgjent.</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag order">🛒 Porosi</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row unread">
+                  <div class="msg-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">Albi (Real Estate)</span>
+                      <span class="msg-time">1h 12m</span>
+                    </div>
+                    <div class="msg-snippet">A mund të shikoj apartamentin 3+1 në Lakrishte? Sot ose nesër.</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag visit">🏠 Vizitë</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row">
+                  <div class="msg-channel em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">info@erapharmacy.al</span>
+                      <span class="msg-time">2h</span>
+                    </div>
+                    <div class="msg-snippet">Re: Q-0243 — Kërkojmë zbritje për pagesë vjetore</div>
+                  </div>
+                </div>
+
+                <div class="msg-row unread">
+                  <div class="msg-channel fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">Bujar Krasniqi</span>
+                      <span class="msg-time">3h</span>
+                    </div>
+                    <div class="msg-snippet">Kërkoj shabllon kontrate për një klient nga Maqedonia</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag new">Lead i ri</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row">
+                  <div class="msg-channel web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">Forma demo · getpika.io</span>
+                      <span class="msg-time">5h</span>
+                    </div>
+                    <div class="msg-snippet">Genti B. · Genti Properties · 12 user · interes për Enterprise</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag hot">High-value</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row">
+                  <div class="msg-channel ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">@bardhcaffeprz</span>
+                      <span class="msg-time">7h</span>
+                    </div>
+                    <div class="msg-snippet">Faleminderit! Po shtojmë edhe një lokal të dytë. Si bëhet?</div>
+                    <div class="msg-tags">
+                      <span class="msg-tag" style="background:var(--success-tint);color:var(--success)">Klient</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="msg-row">
+                  <div class="msg-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                  <div class="msg-body">
+                    <div class="msg-top">
+                      <span class="msg-from">Vena Cosmetics</span>
+                      <span class="msg-time">Dje</span>
+                    </div>
+                    <div class="msg-snippet">A keni POS me prenotim sallon? Po na duhet me të dy bashkë.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Conversation -->
+            <div class="conv-col">
+              <div class="conv-head">
+                <div class="avatar av-orange" style="width:38px;height:38px;font-size:13px">DK</div>
+                <div class="conv-meta">
+                  <div class="ct-name">Driton K. · Driton Construction</div>
+                  <div class="ct-sub"><span class="pip"></span> Online · WhatsApp · +383 44 567 891</div>
+                </div>
+                <div class="conv-actions">
+                  <button class="btn btn-ghost btn-sm">📞</button>
+                  <button class="btn btn-ghost btn-sm">📅</button>
+                  <button class="btn btn-primary btn-sm">+ Lead</button>
+                </div>
+              </div>
+
+              <div class="conv-body">
+                <div class="bubble in">
+                  Përshëndetje! Pashë postin tuaj në LinkedIn për PIKA. Kemi 5 user në zyrë + 3 në terren në një kompani ndërtimi. A do funksiononte për ne?
+                  <span class="b-time">10:24</span>
+                </div>
+                <div class="bubble out wa">
+                  Përshëndetje Driton! Po, PIKA punon shumë mirë për ndërtim — projekte, nënkontraktorë, fatura të lidhura me projekte. Sa user keni gjithsej?
+                  <span class="b-time">10:26 · ✓✓</span>
+                </div>
+                <div class="bubble in">
+                  Gjithsej 8, por do nisim me 5. Po lexova që ka mundësi me workflow auto për nënkontraktorë. A keni një demo?
+                  <span class="b-time">10:32</span>
+                </div>
+                <div class="bubble in">
+                  Sa kushton paketa Pro për 5 user? Mund të caktojmë demo?
+                  <span class="b-time">11:42</span>
+                </div>
+                <div class="bubble ai">
+                  💡 Sugjerim: Klienti është "Hot" — kërkoi çmim + demo. Krijoj kuotim Plan Standart (€89/mu × 12 = €1,068) ose caktoj demo Calendly?
+                </div>
+              </div>
+
+              <div class="conv-foot">
+                <div class="conv-input">
+                  <button class="btn-icon" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:16px;height:16px;color:var(--ink-muted)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></button>
+                  <input placeholder="Shkruaj përgjigjen tënde..." />
+                  <button class="btn btn-wa btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Dërgo</button>
+                </div>
+                <div class="qr-bar">
+                  <span class="qr-chip">📋 Çmimet</span>
+                  <span class="qr-chip">📅 Calendly link</span>
+                  <span class="qr-chip">📄 Brochure Plan Pro</span>
+                  <span class="qr-chip">🎯 Krijo kuotim</span>
+                  <span class="qr-chip">+ Shabllon</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Intel panel -->
+            <div class="inbox-intel">
+              <div class="intel-section">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+                  <div class="avatar avatar-lg av-orange">DK</div>
+                  <div>
+                    <div style="font-size:14px;font-weight:600">Driton K.</div>
+                    <div style="font-size:11.5px;color:var(--ink-muted)">+383 44 567 891</div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:5px">
+                  <button class="btn btn-wa btn-xs" style="flex:1;justify-content:center">Chat</button>
+                  <button class="btn btn-ghost btn-xs" style="flex:1;justify-content:center">📞</button>
+                  <button class="btn btn-ghost btn-xs" style="flex:1;justify-content:center">@</button>
+                </div>
+              </div>
+
+              <div class="intel-section">
+                <div class="intel-label">Konteksti</div>
+                <div class="intel-row"><span class="l">Kompania</span><span class="v">Driton Construction</span></div>
+                <div class="intel-row"><span class="l">Lokacioni</span><span class="v">Prishtinë</span></div>
+                <div class="intel-row"><span class="l">User-ë</span><span class="v">5–8</span></div>
+                <div class="intel-row"><span class="l">Industria</span><span class="v">Ndërtim</span></div>
+                <div class="intel-row"><span class="l">Burimi</span><span class="v">WhatsApp</span></div>
+              </div>
+
+              <div class="intel-section">
+                <div class="intel-label">Cilësia (AI)</div>
+                <div class="score-bar">
+                  <div class="score-track"><div class="score-fill" style="width:84%"></div></div>
+                  <span class="score-val">84</span>
+                </div>
+                <div style="font-size:11px;color:var(--ink-muted)">Bazuar në industri · intent · response time</div>
+              </div>
+
+              <div class="intel-section">
+                <div class="intel-label">Veprime sugjeruara</div>
+                <button class="intel-action">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Krijo kuotim Pro
+                </button>
+                <button class="intel-action">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+                  Cakto demo (Calendly)
+                </button>
+                <button class="intel-action">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Trigger "Hot Lead"
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ CUSTOMERS PANEL ════════════ -->
+      <section class="panel" data-id="customers">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Klientët</h1>
+              <p class="page-sub">142 klientë aktivë · 38 lead-e të kualifikuara · 7 prospekte premium</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Importo
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Klient i ri
+              </button>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active">Të gjithë <span class="count">142</span></button>
+            <button class="tab">Aktivë <span class="count">86</span></button>
+            <button class="tab">Lead-e <span class="count">38</span></button>
+            <button class="tab">VIP <span class="count">7</span></button>
+            <button class="tab">Joaktivë <span class="count">11</span></button>
+          </div>
+
+          <div class="toolbar">
+            <button class="chip active">Të gjithë</button>
+            <button class="chip">🇰🇸 Kosovë (94)</button>
+            <button class="chip">🇦🇱 Shqipëri (38)</button>
+            <button class="chip">🇲🇰 Maqedoni (10)</button>
+            <button class="chip">💼 B2B (87)</button>
+            <button class="chip">🏠 Real Estate (24)</button>
+            <button class="chip">🛒 eCommerce (31)</button>
+            <button class="chip" style="margin-left:auto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+              Filtra
+            </button>
+          </div>
+
+          <div class="card">
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th style="width:36px"><div class="checkbox"></div></th>
+                    <th>Klienti</th>
+                    <th>Kontakti</th>
+                    <th>Industria</th>
+                    <th>Statusi</th>
+                    <th>LTV</th>
+                    <th>Aktiviteti</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-indigo">AL</div>
+                        <div>
+                          <div class="cust-name">Adriatik Logistics</div>
+                          <div class="cust-sub">NIPT K91234567L · Durrës</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Genti Beqiri<div class="cust-sub">CEO · +355 69 234 567</div></td>
+                    <td><span class="badge badge-neutral">🚚 Logjistikë</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Klient VIP</span></td>
+                    <td class="num strong">€18,840</td>
+                    <td class="muted">2 ditë</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></button>
+                        <button class="btn-icon btn-sm" title="Më shumë">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-pink">MB</div>
+                        <div>
+                          <div class="cust-name">Mirjeta Boutique</div>
+                          <div class="cust-sub">@mirjeta_boutique · Shkup</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Mirjeta Salihi<div class="cust-sub">Pronare · +389 70 123 456</div></td>
+                    <td><span class="badge badge-pink">🛒 eCommerce</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="num strong">€2,840</td>
+                    <td class="muted">5h</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:#DD2A7B"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-amber">RE</div>
+                        <div>
+                          <div class="cust-name">Re/Max Kosova</div>
+                          <div class="cust-sub">15 agjentë · Prishtinë</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Albi Demolli<div class="cust-sub">Manager · +383 44 111 222</div></td>
+                    <td><span class="badge badge-warning">🏠 Real Estate</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="num strong">€8,640</td>
+                    <td class="muted">1 ditë</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-green">BC</div>
+                        <div>
+                          <div class="cust-name">Bardh Caffe</div>
+                          <div class="cust-sub">3 lokale · Prizren</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Bardh Cana<div class="cust-sub">Pronar · +383 49 333 444</div></td>
+                    <td><span class="badge badge-neutral">☕ HoReCa</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="num strong">€1,620</td>
+                    <td class="muted">2 ditë</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-rose">EP</div>
+                        <div>
+                          <div class="cust-name">Era Pharmacy</div>
+                          <div class="cust-sub">5 lokale · Tiranë</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Erald Memaj<div class="cust-sub">Pronar · +355 68 555 666</div></td>
+                    <td><span class="badge badge-info">⚕️ Shëndet</span></td>
+                    <td><span class="badge badge-warning"><span class="pip"></span>Pagesë e vonuar</span></td>
+                    <td class="num strong">€4,200</td>
+                    <td class="muted">3 ditë</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-violet">DC</div>
+                        <div>
+                          <div class="cust-name">Driton Construction</div>
+                          <div class="cust-sub">Prishtinë</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Driton K.<div class="cust-sub">Lead i ri · WhatsApp</div></td>
+                    <td><span class="badge" style="background:#FED7AA;color:#9A3412">🏗️ Ndërtim</span></td>
+                    <td><span class="badge badge-brand"><span class="pip"></span>Lead Hot</span></td>
+                    <td class="muted">—</td>
+                    <td class="muted">12 min</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-teal">VC</div>
+                        <div>
+                          <div class="cust-name">Vena Cosmetics</div>
+                          <div class="cust-sub">Sallon · Prishtinë</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Vlora Sahiti<div class="cust-sub">Pronare · +383 49 112 233</div></td>
+                    <td><span class="badge badge-purple">💄 Beauty</span></td>
+                    <td><span class="badge badge-neutral"><span class="pip"></span>Provë 14 ditë</span></td>
+                    <td class="muted">—</td>
+                    <td class="muted">Dje</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="checkbox"></div></td>
+                    <td>
+                      <div class="cust">
+                        <div class="avatar av-cyan">HD</div>
+                        <div>
+                          <div class="cust-name">Hekla Distribution</div>
+                          <div class="cust-sub">Tiranë</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Petrit Hekla<div class="cust-sub">CEO · +355 67 789 012</div></td>
+                    <td><span class="badge badge-neutral">🚚 Distribution</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Klient VIP</span></td>
+                    <td class="num strong">€14,400</td>
+                    <td class="muted">12 min</td>
+                    <td>
+                      <div style="display:flex;gap:4px">
+                        <button class="btn-icon btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--wa)"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></button>
+                        <button class="btn-icon btn-sm">⋯</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ PIPELINE PANEL ════════════ -->
+      <section class="panel" data-id="pipeline">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Pipeline e shitjeve</h1>
+              <p class="page-sub">Tërhiq kartat midis kolonave për të lëvizur fazën. €164.8K vlerë e mundshme.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">📊 Pamja</button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Deal i ri
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/></svg></span>Pipeline gjithsej</div>
+              <div class="stat-value">€164.8K</div>
+              <div class="stat-delta">38 deals aktive</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span>Mbyllur (Maj)</div>
+              <div class="stat-value">€42.8K</div>
+              <div class="stat-delta">11 deals · 32% rate</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--warning-tint);color:var(--warning)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Cikli mesatar</div>
+              <div class="stat-value">14<span class="unit">d</span></div>
+              <div class="stat-delta down">+2d nga muaji i kaluar</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--purple-tint);color:var(--purple)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Hot leads</div>
+              <div class="stat-value">7</div>
+              <div class="stat-delta">€38.4K vlerë</div>
+            </div>
+          </div>
+
+          <div class="kanban">
+
+            <div class="k-col">
+              <div class="k-col-head">
+                <span class="k-stripe" style="background:#94A3B8"></span>
+                <span class="k-col-name">Lead i ri</span>
+                <span class="k-col-count">9</span>
+                <span class="k-col-sum">€18.2K</span>
+              </div>
+              <div class="k-col-body">
+                <div class="k-card">
+                  <div class="k-card-name">Driton Construction</div>
+                  <div class="k-card-meta">Plan Pro · 5 user · Prishtinë</div>
+                  <div class="k-card-val">€2,400<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2-3.6-3.3.1-.7 1-1V8l-1-2.4-.8-.5h-.7l-1 .5-1.3 3.1 1.5 3.9 6.4 5.6 3.9.8 2.2-1.5.2-1.5z"/></svg></span>
+                    <span class="badge badge-danger">🔥 Hot</span>
+                    <span class="k-card-time">12m</span>
+                  </div>
+                </div>
+                <div class="k-card">
+                  <div class="k-card-name">Vena Cosmetics</div>
+                  <div class="k-card-meta">Sallon · Beauty &amp; wellness</div>
+                  <div class="k-card-val">€1,800<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1z"/></svg></span>
+                    <span class="badge badge-info">Warm</span>
+                    <span class="k-card-time">Dje</span>
+                  </div>
+                </div>
+                <div class="k-card">
+                  <div class="k-card-name">Bujar Krasniqi</div>
+                  <div class="k-card-meta">Konsulent · 1 user</div>
+                  <div class="k-card-val">€348<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel" style="background:#1877F2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span>
+                    <span class="badge badge-neutral">Cold</span>
+                    <span class="k-card-time">3h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="k-col">
+              <div class="k-col-head">
+                <span class="k-stripe" style="background:var(--info)"></span>
+                <span class="k-col-name">I kualifikuar</span>
+                <span class="k-col-count">10</span>
+                <span class="k-col-sum">€28.6K</span>
+              </div>
+              <div class="k-col-body">
+                <div class="k-card">
+                  <div class="k-card-name">Genti Properties</div>
+                  <div class="k-card-meta">Real estate · 12 user</div>
+                  <div class="k-card-val">€5,400<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/></svg></span>
+                    <span class="badge badge-danger">🔥 Hot</span>
+                    <span class="k-card-time">5h</span>
+                  </div>
+                </div>
+                <div class="k-card">
+                  <div class="k-card-name">Vesa Boutique Shop</div>
+                  <div class="k-card-meta">eCommerce · Shkup</div>
+                  <div class="k-card-val">€2,160<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/></svg></span>
+                    <span class="badge badge-info">Demo</span>
+                    <span class="k-card-time">2d</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="k-col">
+              <div class="k-col-head">
+                <span class="k-stripe" style="background:var(--warning)"></span>
+                <span class="k-col-name">Propozim</span>
+                <span class="k-col-count">8</span>
+                <span class="k-col-sum">€48.4K</span>
+              </div>
+              <div class="k-col-body">
+                <div class="k-card">
+                  <div class="k-card-name">Adriatik Logistics</div>
+                  <div class="k-card-meta">Enterprise · Durrës</div>
+                  <div class="k-card-val">€8,400<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel" style="background:var(--info)">@</span>
+                    <span class="badge badge-warning">Q-247</span>
+                    <span class="k-card-time">1d</span>
+                  </div>
+                </div>
+                <div class="k-card">
+                  <div class="k-card-name">Toskana Restaurants</div>
+                  <div class="k-card-meta">5 lokale · POS + CRM</div>
+                  <div class="k-card-val">€6,000<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0"/></svg></span>
+                    <span class="badge badge-neutral">PDF dërguar</span>
+                    <span class="k-card-time">3d</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="k-col">
+              <div class="k-col-head">
+                <span class="k-stripe" style="background:var(--purple)"></span>
+                <span class="k-col-name">Negocim</span>
+                <span class="k-col-count">5</span>
+                <span class="k-col-sum">€32.4K</span>
+              </div>
+              <div class="k-col-body">
+                <div class="k-card">
+                  <div class="k-card-name">Hekla Distribution</div>
+                  <div class="k-card-meta">B2B portal · Tiranë</div>
+                  <div class="k-card-val">€7,200<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel" style="background:#64748B">📞</span>
+                    <span class="badge badge-danger">🔥 Hot</span>
+                    <span class="k-card-time">Sot</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="k-col">
+              <div class="k-col-head">
+                <span class="k-stripe" style="background:var(--success)"></span>
+                <span class="k-col-name">Fituar</span>
+                <span class="k-col-count">6</span>
+                <span class="k-col-sum">€37.2K</span>
+              </div>
+              <div class="k-col-body">
+                <div class="k-card">
+                  <div class="k-card-name">Sahit Auto Service</div>
+                  <div class="k-card-meta">Plan Pro · Ferizaj</div>
+                  <div class="k-card-val">€3,600<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel" style="background:var(--success)">✓</span>
+                    <span class="badge badge-success">Mbyllur</span>
+                    <span class="k-card-time">Sot</span>
+                  </div>
+                </div>
+                <div class="k-card">
+                  <div class="k-card-name">Mirjeta Boutique</div>
+                  <div class="k-card-meta">eCommerce + Marketing</div>
+                  <div class="k-card-val">€2,160<small>/vit</small></div>
+                  <div class="k-card-foot">
+                    <span class="k-card-channel ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/></svg></span>
+                    <span class="badge badge-success">Mbyllur</span>
+                    <span class="k-card-time">3d</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ════════════ QUOTES PANEL ════════════ -->
+      <section class="panel" data-id="quotes">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Kuotime</h1>
+              <p class="page-sub">Krijo · dërgo me WhatsApp/Email · ndiq pranimet · konverto auto në fatura.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+                Nga shabllonet
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Kuotim i ri
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--amber-tint);color:var(--amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg></span>Aktive</div>
+              <div class="stat-value">12</div>
+              <div class="stat-delta">€54,840 vlerë</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span>Të pranuara (30d)</div>
+              <div class="stat-value">9</div>
+              <div class="stat-delta">75% konvertim</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Vlera mesatare</div>
+              <div class="stat-value">€4,570</div>
+              <div class="stat-delta">+18% vs Prill</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--purple-tint);color:var(--purple)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Cikli mesatar</div>
+              <div class="stat-value">6.2<span class="unit">d</span></div>
+              <div class="stat-delta">Krijim → Pranim</div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Të gjitha kuotimet</div>
+                  <div class="card-sub">Klikoni një rresht për pamje paraprake</div>
+                </div>
+                <div class="head-actions">
+                  <button class="chip active">Të gjitha</button>
+                  <button class="chip">Të dërguara</button>
+                  <button class="chip">Të pranuara</button>
+                </div>
+              </div>
+              <div class="tbl-wrap">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>Kuotim</th>
+                      <th>Klient</th>
+                      <th>Vlefshëm</th>
+                      <th>Statusi</th>
+                      <th class="right">Vlera</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background:var(--bg-2)">
+                      <td><span class="strong">Q-2026-0248</span><div class="muted" style="font-size:11.5px">Plan Pro · 5 user</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-violet">DC</div><div><div class="cust-name">Driton Construction</div></div></div></td>
+                      <td class="muted">25 Maj</td>
+                      <td><span class="badge badge-warning"><span class="pip"></span>Draft</span></td>
+                      <td class="right num strong">€4,896</td>
+                      <td><button class="btn btn-soft btn-sm">Vazhdo</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Q-2026-0247</span><div class="muted" style="font-size:11.5px">Enterprise · vjetor</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-indigo">AL</div><div><div class="cust-name">Adriatik Logistics</div></div></div></td>
+                      <td class="muted">15 Qer</td>
+                      <td><span class="badge badge-info"><span class="pip"></span>Dërguar</span></td>
+                      <td class="right num strong">€8,400</td>
+                      <td><button class="btn btn-primary btn-sm">Konverto</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Q-2026-0246</span><div class="muted" style="font-size:11.5px">CRM Pro · 24 muaj</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-cyan">HD</div><div><div class="cust-name">Hekla Distribution</div></div></div></td>
+                      <td class="muted">28 Maj</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Pranuar</span></td>
+                      <td class="right num strong">€7,200</td>
+                      <td><button class="btn btn-primary btn-sm">Konverto</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Q-2026-0245</span><div class="muted" style="font-size:11.5px">5 lokale · POS</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-orange">TR</div><div><div class="cust-name">Toskana Restaurants</div></div></div></td>
+                      <td class="muted">20 Qer</td>
+                      <td><span class="badge badge-purple"><span class="pip"></span>Negocim</span></td>
+                      <td class="right num strong">€6,000</td>
+                      <td><button class="btn btn-ghost btn-sm">Detaje</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Q-2026-0244</span><div class="muted" style="font-size:11.5px">Real Estate Plan</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-amber">RE</div><div><div class="cust-name">Re/Max Kosova</div></div></div></td>
+                      <td class="muted">10 Qer</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Pranuar</span></td>
+                      <td class="right num strong">€5,400</td>
+                      <td><button class="btn btn-primary btn-sm">Konverto</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Q-2026-0243</span><div class="muted" style="font-size:11.5px">eCom Pro · vjetor</div></td>
+                      <td><div class="cust"><div class="avatar avatar-sm av-pink">VB</div><div><div class="cust-name">Vesa Boutique</div></div></div></td>
+                      <td class="muted">05 Qer</td>
+                      <td><span class="badge badge-danger"><span class="pip"></span>Pa-përgjigje</span></td>
+                      <td class="right num strong">€2,160</td>
+                      <td><button class="btn btn-ghost btn-sm">Kujto</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Preview side -->
+            <div>
+              <div class="doc-preview">
+                <div class="doc-preview-head">
+                  <div>
+                    <div style="font-size:9.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-muted);margin-bottom:4px;font-weight:600">Kuotim</div>
+                    <div class="doc-no">Q-2026-0247<small>Vlefshëm deri 15 Qer 2026</small></div>
+                  </div>
+                  <div class="doc-logo-mini">
+                    <div class="doc-logo-mark">P</div>
+                    <strong>PIKA</strong>
+                  </div>
+                </div>
+
+                <div class="doc-meta-grid">
+                  <div>
+                    <div class="doc-meta-label">Nga</div>
+                    <div class="doc-meta-val"><strong>Studio Marketing AR</strong><br>Prishtinë, KS<br>NUI: 901234567</div>
+                  </div>
+                  <div>
+                    <div class="doc-meta-label">Për</div>
+                    <div class="doc-meta-val"><strong>Adriatik Logistics</strong><br>Durrës, SHQ<br>NIPT: K91234567L</div>
+                  </div>
+                </div>
+
+                <div class="doc-lines">
+                  <div class="doc-line head">
+                    <div>Përshkrimi</div>
+                    <div class="right">Sasi</div>
+                    <div class="right">Çmim</div>
+                    <div class="right">Totali</div>
+                  </div>
+                  <div class="doc-line">
+                    <div>Enterprise · Licencë vjetore</div>
+                    <div class="right">1</div>
+                    <div class="right">€5,988</div>
+                    <div class="right">€5,988</div>
+                  </div>
+                  <div class="doc-line">
+                    <div>Setup &amp; Trajnim</div>
+                    <div class="right">1</div>
+                    <div class="right">€1,200</div>
+                    <div class="right">€1,200</div>
+                  </div>
+                  <div class="doc-line">
+                    <div>Custom integrim</div>
+                    <div class="right">12h</div>
+                    <div class="right">€75</div>
+                    <div class="right">€900</div>
+                  </div>
+                </div>
+
+                <div class="doc-totals">
+                  <div class="doc-total-row"><span>Nëntotali</span><span class="v">€8,088</span></div>
+                  <div class="doc-total-row"><span>Zbritje (5%)</span><span class="v">−€404</span></div>
+                  <div class="doc-total-row"><span>TVSH (20% SHQ)</span><span class="v">€1,537</span></div>
+                  <div class="doc-total-row grand"><span>Totali</span><span class="v">€9,221</span></div>
+                </div>
+
+                <div class="fisc-chip" style="margin-top:14px;width:100%;justify-content:center">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+                  Auto-fiskalizohet me CIS Shqipëri kur konvertohet në faturë
+                </div>
+              </div>
+
+              <div style="display:flex;gap:6px;margin-top:12px">
+                <button class="btn btn-wa btn-sm" style="flex:1;justify-content:center">📤 WhatsApp</button>
+                <button class="btn btn-ghost btn-sm" style="flex:1;justify-content:center">📧 Email</button>
+                <button class="btn btn-ghost btn-sm" style="flex:1;justify-content:center">📄 PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ INVOICES PANEL ════════════ -->
+      <section class="panel" data-id="invoices">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Fatura</h1>
+              <p class="page-sub">94 fatura · Auto-fiskalizim me ATK Kosovë + CIS Shqipëri · Bank reconciliation me BKT/Raiffeisen.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
+                Eksporto
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Faturë e re
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Të ardhura (Maj)</div>
+              <div class="stat-value">€42,640</div>
+              <div class="stat-delta">+12.8% vs Prill</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span>Të paguara</div>
+              <div class="stat-value">77</div>
+              <div class="stat-delta">€34,180 · 81%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--warning-tint);color:var(--warning)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Në pritje</div>
+              <div class="stat-value">€8,460</div>
+              <div class="stat-delta">14 fatura</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--danger-tint);color:var(--danger)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span>Të vonuara</div>
+              <div class="stat-value">€2,100</div>
+              <div class="stat-delta down">3 fatura · auto-kujtesa</div>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active">Të gjitha <span class="count">94</span></button>
+            <button class="tab">Të paguara <span class="count">77</span></button>
+            <button class="tab">Në pritje <span class="count">14</span></button>
+            <button class="tab">Të vonuara <span class="count">3</span></button>
+            <button class="tab">Draft <span class="count">2</span></button>
+          </div>
+
+          <div class="card">
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Faturë</th>
+                    <th>Klient</th>
+                    <th>Lëshuar</th>
+                    <th>Afati</th>
+                    <th>Fiskalizim</th>
+                    <th>Statusi</th>
+                    <th class="right">Vlera</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="strong">F-2026-0142</span><div class="muted" style="font-size:11.5px">Enterprise · vjetor</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-indigo">AL</div><div><div class="cust-name">Adriatik Logistics</div><div class="cust-sub">Durrës · 🇦🇱</div></div></div></td>
+                    <td class="muted">08 Maj</td>
+                    <td class="muted">22 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>CIS <code>A3B9F2</code></span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                    <td class="right num strong">€8,400</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0141</span><div class="muted" style="font-size:11.5px">CRM Pro · vjetor</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-cyan">HD</div><div><div class="cust-name">Hekla Distribution</div><div class="cust-sub">Tiranë · 🇦🇱</div></div></div></td>
+                    <td class="muted">06 Maj</td>
+                    <td class="muted">20 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>CIS <code>7C4D81</code></span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                    <td class="right num strong">€7,200</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0140</span><div class="muted" style="font-size:11.5px">5 lokale · POS</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-orange">TR</div><div><div class="cust-name">Toskana Restaurants</div><div class="cust-sub">Tiranë · 🇦🇱</div></div></div></td>
+                    <td class="muted">02 Maj</td>
+                    <td class="muted">16 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>CIS</span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                    <td class="right num strong">€500</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0139</span><div class="muted" style="font-size:11.5px">Pro · mujor</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-rose">EP</div><div><div class="cust-name">Era Pharmacy</div><div class="cust-sub">Tiranë · 🇦🇱</div></div></div></td>
+                    <td class="muted">01 Maj</td>
+                    <td class="muted" style="color:var(--danger);font-weight:600">04 Maj · 9d vonesë</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>CIS</span></td>
+                    <td><span class="badge badge-danger"><span class="pip"></span>Vonuar</span></td>
+                    <td class="right num strong">€400</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0138</span><div class="muted" style="font-size:11.5px">eCom Pro · mujor</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-pink">MB</div><div><div class="cust-name">Mirjeta Boutique</div><div class="cust-sub">Shkup · 🇲🇰</div></div></div></td>
+                    <td class="muted">25 Pri</td>
+                    <td class="muted">09 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>ATK <code>B7F2D5</code></span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                    <td class="right num strong">€180</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0137</span><div class="muted" style="font-size:11.5px">Standart · mujor</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-green">BC</div><div><div class="cust-name">Bardh Caffe</div><div class="cust-sub">Prizren · 🇰🇸</div></div></div></td>
+                    <td class="muted">20 Pri</td>
+                    <td class="muted">04 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>ATK <code>2C8A91</code></span></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                    <td class="right num strong">€180</td>
+                  </tr>
+                  <tr>
+                    <td><span class="strong">F-2026-0136</span><div class="muted" style="font-size:11.5px">Setup + 3 muaj</div></td>
+                    <td><div class="cust"><div class="avatar avatar-sm av-amber">RE</div><div><div class="cust-name">Re/Max Kosova</div><div class="cust-sub">Prishtinë · 🇰🇸</div></div></div></td>
+                    <td class="muted">18 Pri</td>
+                    <td class="muted">02 Maj</td>
+                    <td><span class="fisc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>ATK</span></td>
+                    <td><span class="badge badge-warning"><span class="pip"></span>Pjesërisht</span></td>
+                    <td class="right num strong">€2,100</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ SUBSCRIPTIONS PANEL ════════════ -->
+      <section class="panel" data-id="subscriptions">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Abonime</h1>
+              <p class="page-sub">28 abonime aktive · Auto-rinovim · Dunning automatik për pagesa të vonuara.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">Plani i ri</button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Abonim
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)">M</span>MRR</div>
+              <div class="stat-value">€18,420</div>
+              <div class="stat-delta">+€2,840 muaji</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--purple-tint);color:var(--purple)">A</span>ARR projektuar</div>
+              <div class="stat-value">€221K</div>
+              <div class="stat-delta">12 muaj</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)">A</span>Aktive</div>
+              <div class="stat-value">28</div>
+              <div class="stat-delta">+4 muaj</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--danger-tint);color:var(--danger)">C</span>Churn rate</div>
+              <div class="stat-value">2.1<span class="unit">%</span></div>
+              <div class="stat-delta down">1 anulim muaji</div>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active">Aktive <span class="count">28</span></button>
+            <button class="tab">Past due <span class="count">2</span></button>
+            <button class="tab">Provë <span class="count">5</span></button>
+            <button class="tab">Anuluar <span class="count">12</span></button>
+          </div>
+
+          <div class="card">
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Klient</th>
+                    <th>Plan</th>
+                    <th>Cikli</th>
+                    <th>Rinovim</th>
+                    <th>Statusi</th>
+                    <th class="right">MRR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-indigo">AL</div><div><div class="cust-name">Adriatik Logistics</div><div class="cust-sub">Që nga Jan 2025</div></div></div></td>
+                    <td><span class="strong">Enterprise</span><div class="muted" style="font-size:11.5px">15 user + API</div></td>
+                    <td class="muted">Vjetor</td>
+                    <td>14 Qer 2026<div class="muted" style="font-size:11px">për 35 ditë</div></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="right num strong">€700</td>
+                  </tr>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-orange">TR</div><div><div class="cust-name">Toskana Restaurants</div><div class="cust-sub">5 lokale POS</div></div></div></td>
+                    <td><span class="strong">Pro</span></td>
+                    <td class="muted">Mujor</td>
+                    <td>02 Qer 2026<div class="muted" style="font-size:11px">për 23 ditë</div></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="right num strong">€500</td>
+                  </tr>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-rose">EP</div><div><div class="cust-name">Era Pharmacy</div><div class="cust-sub">5 lokale</div></div></div></td>
+                    <td><span class="strong">Pro</span></td>
+                    <td class="muted">Mujor</td>
+                    <td style="color:var(--danger)">Pagesa dështoi<div class="muted" style="font-size:11px">Tentativa 2/4</div></td>
+                    <td><span class="badge badge-danger"><span class="pip"></span>Past Due</span></td>
+                    <td class="right num strong">€400</td>
+                  </tr>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-amber">RE</div><div><div class="cust-name">Re/Max Kosova</div><div class="cust-sub">15 agjentë</div></div></div></td>
+                    <td><span class="strong">Real Estate Plan</span></td>
+                    <td class="muted">Vjetor</td>
+                    <td>10 Maj 2027<div class="muted" style="font-size:11px">për 365 ditë</div></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>I ri</span></td>
+                    <td class="right num strong">€450</td>
+                  </tr>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-pink">MB</div><div><div class="cust-name">Mirjeta Boutique</div><div class="cust-sub">Shkup</div></div></div></td>
+                    <td><span class="strong">eCom Pro</span></td>
+                    <td class="muted">Mujor</td>
+                    <td>25 Maj 2026<div class="muted" style="font-size:11px">për 15 ditë</div></td>
+                    <td><span class="badge badge-success"><span class="pip"></span>Aktiv</span></td>
+                    <td class="right num strong">€180</td>
+                  </tr>
+                  <tr>
+                    <td><div class="cust"><div class="avatar avatar-sm av-green">BC</div><div><div class="cust-name">Bardh Caffe</div><div class="cust-sub">3 lokale</div></div></div></td>
+                    <td><span class="strong">Standart</span></td>
+                    <td class="muted">Mujor</td>
+                    <td>18 Maj 2026<div class="muted" style="font-size:11px">për 8 ditë</div></td>
+                    <td><span class="badge badge-warning"><span class="pip"></span>Skadon</span></td>
+                    <td class="right num strong">€180</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ EXPENSES PANEL ════════════ -->
+      <section class="panel" data-id="expenses">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Shpenzime</h1>
+              <p class="page-sub">Skano fatura me OCR (Claude Vision) · Kategorizo auto · Raporte për kontabilistin.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                Skano faturë
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Shpenzim i ri
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--danger-tint);color:var(--danger)">€</span>Muaji Maj</div>
+              <div class="stat-value">€12,400</div>
+              <div class="stat-delta down">−€420 vs Prill</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--warning-tint);color:var(--warning)">P</span>Pa-rimbursuara</div>
+              <div class="stat-value">€840</div>
+              <div class="stat-delta">7 fatura</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--info-tint);color:var(--info)">B</span>Buxheti</div>
+              <div class="stat-value">68<span class="unit">%</span></div>
+              <div class="stat-delta">€8.4K / €12.4K</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)">P</span>Profit margin</div>
+              <div class="stat-value">71<span class="unit">%</span></div>
+              <div class="stat-delta">€30K profit</div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Shpenzimet e fundit</div>
+                </div>
+                <button class="btn btn-ghost btn-sm">Të gjitha</button>
+              </div>
+              <div class="tbl-wrap">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>Përshkrimi</th>
+                      <th>Kategoria</th>
+                      <th>Data</th>
+                      <th>Statusi</th>
+                      <th class="right">Vlera</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="strong">AWS Cloud Hosting</span><div class="muted" style="font-size:11.5px">EU-West · prodhim</div></td>
+                      <td><span class="badge badge-info">☁️ Infra</span></td>
+                      <td class="muted">07 Maj</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                      <td class="right num strong">€487</td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Anthropic API</span><div class="muted" style="font-size:11.5px">Claude tokens</div></td>
+                      <td><span class="badge badge-info">☁️ Infra</span></td>
+                      <td class="muted">05 Maj</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                      <td class="right num strong">€340</td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Zyrë qira · Maj</span><div class="muted" style="font-size:11.5px">HUB387 Prishtinë</div></td>
+                      <td><span class="badge badge-neutral">🏢 Operative</span></td>
+                      <td class="muted">02 Maj</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                      <td class="right num strong">€280</td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Figma Org</span><div class="muted" style="font-size:11.5px">5 editor seats</div></td>
+                      <td><span class="badge badge-warning">💻 Software</span></td>
+                      <td class="muted">28 Pri</td>
+                      <td><span class="badge badge-success"><span class="pip"></span>Paguar</span></td>
+                      <td class="right num strong">€225</td>
+                    </tr>
+                    <tr>
+                      <td><span class="strong">Meta Ads · Fushatë</span><div class="muted" style="font-size:11.5px">Lansim PIKA</div></td>
+                      <td><span class="badge badge-pink">📣 Marketing</span></td>
+                      <td class="muted">25 Pri</td>
+                      <td><span class="badge badge-warning"><span class="pip"></span>Në pritje</span></td>
+                      <td class="right num strong">€680</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Categories breakdown -->
+            <div>
+              <div class="card" style="padding:18px">
+                <div class="card-title" style="margin-bottom:14px">Sipas kategorisë</div>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span style="font-weight:500">☁️ Infrastrukturë</span><span class="num">€4,820 · 39%</span></div>
+                    <div style="height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden"><div style="width:39%;height:100%;background:var(--info)"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span style="font-weight:500">📣 Marketing</span><span class="num">€2,840 · 23%</span></div>
+                    <div style="height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden"><div style="width:23%;height:100%;background:var(--pink)"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span style="font-weight:500">💻 Software</span><span class="num">€1,920 · 15%</span></div>
+                    <div style="height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden"><div style="width:15%;height:100%;background:var(--warning)"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span style="font-weight:500">🏢 Operative</span><span class="num">€1,540 · 13%</span></div>
+                    <div style="height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden"><div style="width:13%;height:100%;background:var(--ink-soft)"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span style="font-weight:500">📑 Profesionale</span><span class="num">€1,280 · 10%</span></div>
+                    <div style="height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden"><div style="width:10%;height:100%;background:var(--brand)"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="padding:18px;margin-top:14px;background:linear-gradient(135deg, var(--brand-tint), var(--purple-tint));border-color:var(--brand-tint-2)">
+                <div style="display:flex;align-items:flex-start;gap:12px">
+                  <div style="width:32px;height:32px;background:var(--brand);border-radius:8px;display:grid;place-items:center;color:#fff;flex-shrink:0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:16px;height:16px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                  </div>
+                  <div style="flex:1">
+                    <div style="font-size:13.5px;font-weight:600;color:var(--brand);margin-bottom:3px">Skano faturë me AI</div>
+                    <div style="font-size:11.5px;color:var(--ink-soft);line-height:1.45">Bëj foto faturës me telefonin · Claude Vision e ekstrakton automatikisht · klikim një = e shtuar.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ════════════ LISTINGS PANEL (Real Estate + Products + Services) ════════════ -->
+      <section class="panel" data-id="listings">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Katalog &amp; Listingje</h1>
+              <p class="page-sub">Prona, produkte ose shërbime — të lidhura me CRM, fatura dhe WhatsApp për konvertim të menjëhershëm.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Import CSV
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Listing i ri
+              </button>
+            </div>
+          </div>
+
+          <!-- Industry tabs - this drives the view -->
+          <div class="tabs">
+            <button class="tab active">🏠 Real Estate <span class="count">24</span></button>
+            <button class="tab">🛒 Produkte (eCom) <span class="count">38</span></button>
+            <button class="tab">⚙️ Shërbime <span class="count">12</span></button>
+            <button class="tab">📦 Inventar</button>
+          </div>
+
+          <div class="toolbar">
+            <button class="chip active">Të gjitha (24)</button>
+            <button class="chip">🏢 Apartamente (14)</button>
+            <button class="chip">🏡 Shtëpi (6)</button>
+            <button class="chip">🏗️ Komerciale (3)</button>
+            <button class="chip">🌳 Toka (1)</button>
+            <button class="chip">✅ Aktive (18)</button>
+            <button class="chip">📤 Shitur (4)</button>
+            <button class="chip" style="margin-left:auto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+              Filtra
+            </button>
+          </div>
+
+          <!-- Real estate listings grid -->
+          <div class="listings-grid">
+
+            <div class="listing-card">
+              <div class="listing-img apt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <div class="listing-badge featured">⭐ Featured</div>
+                <button class="listing-fave fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€125,000 <small>/ €1,950/m²</small></div>
+                <div class="listing-name">Apartament 3+1, Lakrishte</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="2"/></svg> 64m²</span>
+                  <span class="listing-attr">🛏 3</span>
+                  <span class="listing-attr">🛁 2</span>
+                  <span class="listing-attr">📍 Prishtinë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>847 shikime</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img house">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                <div class="listing-badge">🔥 4 vizita sot</div>
+                <button class="listing-fave"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€340,000</div>
+                <div class="listing-name">Shtëpi 4+1 me oborr, Veternik</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⊞ 180m²</span>
+                  <span class="listing-attr">🛏 4</span>
+                  <span class="listing-attr">🛁 3</span>
+                  <span class="listing-attr">📍 Prishtinë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>1.2k shikime</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img apt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                <button class="listing-fave"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€89,000 <small>/ €1,580/m²</small></div>
+                <div class="listing-name">Apartament 2+1, Qendër</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⊞ 56m²</span>
+                  <span class="listing-attr">🛏 2</span>
+                  <span class="listing-attr">🛁 1</span>
+                  <span class="listing-attr">📍 Tiranë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">📨 6 mesazhe</span>
+                <span class="listing-status" style="background:var(--warning-tint);color:var(--warning)">Negocim</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img commercial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                <div class="listing-badge">💼 Komercial</div>
+                <button class="listing-fave"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0"/></svg></button>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€2,200 <small>/ muaj qira</small></div>
+                <div class="listing-name">Zyrë me 4 dhoma, Pejton</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⊞ 110m²</span>
+                  <span class="listing-attr">🅿️ 3</span>
+                  <span class="listing-attr">📍 Prishtinë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">👁 423 shikime</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img land">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 22h20"/><path d="M5 22V12l7-5 7 5v10"/></svg>
+                <button class="listing-fave"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0"/></svg></button>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€48,000 <small>/ €40/m²</small></div>
+                <div class="listing-name">Truall ndërtimi, Çagllavica</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⊞ 1200m²</span>
+                  <span class="listing-attr">🏗 P+3</span>
+                  <span class="listing-attr">📍 Prishtinë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">👁 211 shikime</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img apt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                <div class="listing-badge featured">✅ Shitur</div>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€145,000</div>
+                <div class="listing-name">Apartament 3+1, Dardania</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⊞ 72m²</span>
+                  <span class="listing-attr">🛏 3</span>
+                  <span class="listing-attr">📍 Prishtinë</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">💰 Komision: €4,350</span>
+                <span class="listing-status" style="background:var(--bg-3);color:var(--ink-soft)">Mbyllur</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Industry view explainer -->
+          <div style="margin-top:32px;padding:20px;background:var(--brand-tint);border:1px solid var(--brand-tint-2);border-radius:var(--r-lg);display:flex;align-items:flex-start;gap:16px">
+            <div style="width:40px;height:40px;background:var(--brand);color:#fff;border-radius:10px;display:grid;place-items:center;flex-shrink:0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px;height:20px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px;color:var(--brand)">Si funksionon për tipin tënd të biznesit?</div>
+              <div style="font-size:12.5px;color:var(--ink-2);line-height:1.55">
+                <strong>Real Estate:</strong> Listingjet janë prona me foto, m², dhoma. Çdo vizitor në WhatsApp mund të lidhet me një pronë specifike. Komisionet llogariten auto.<br>
+                <strong>eCommerce:</strong> Listingjet janë produkte me variante, inventar, çmime. Klikoni "Produkte (eCom)" tab.<br>
+                <strong>Shërbime:</strong> Listingjet janë paketat e shërbimeve me orë, çmime fikse, kategori. Klikoni "Shërbime" tab.
+              </div>
+            </div>
+          </div>
+
+          <!-- Show alternate view: Products (e-commerce) -->
+          <div class="section-div" style="margin-top:36px">
+            <h3>Shembull: Pamja e Produkteve (eCommerce)</h3>
+            <span class="sub">Kur zgjedh "🛒 Produkte" tab</span>
+            <div class="line"></div>
+          </div>
+
+          <div class="listings-grid">
+
+            <div class="listing-card">
+              <div class="listing-img tshirt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/></svg>
+                <div class="listing-badge">🔥 Bestseller</div>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€34.90</div>
+                <div class="listing-name">Bluzë e bardhë cotton, Premium</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">Madhësi: XS-XL</span>
+                  <span class="listing-attr">📦 24 në stok</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">🛒 18 shitur muaj</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img shoes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 20c-1.5 0-3-.5-4-1.5L2 16l4-2 2-4h6l4 6h2v4z"/></svg>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€89.00 <small style="text-decoration:line-through">€119</small></div>
+                <div class="listing-name">Atlete sportive, Air Pro</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">Madhësi: 38-44</span>
+                  <span class="listing-attr">📦 8 në stok</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">🛒 32 shitur</span>
+                <span class="listing-status" style="background:var(--warning-tint);color:var(--warning)">Stok i ulët</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img bag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4a4 4 0 018 0v2"/></svg>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€145.00</div>
+                <div class="listing-name">Çantë lëkure, Crossbody</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">Ngjyrë: 3</span>
+                  <span class="listing-attr">📦 12 në stok</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">🛒 7 shitur</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+            <div class="listing-card">
+              <div class="listing-img service">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <div class="listing-badge">⚙️ Shërbim</div>
+              </div>
+              <div class="listing-body">
+                <div class="listing-price">€89/h</div>
+                <div class="listing-name">Konsulencë digjitale, ora</div>
+                <div class="listing-attrs">
+                  <span class="listing-attr">⏱ 1h min</span>
+                  <span class="listing-attr">💼 B2B</span>
+                </div>
+              </div>
+              <div class="listing-foot">
+                <span class="listing-stat">📅 14 prenotime</span>
+                <span class="listing-status" style="background:var(--success-tint);color:var(--success)">Aktiv</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ════════════ TEMPLATES PANEL — RICH LIBRARY ════════════ -->
+      <section class="panel" data-id="templates">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Biblioteka e shablloneve</h1>
+              <p class="page-sub">68 shabllone me variabla që mbushen automatikisht nga CRM. Shqip + Anglisht. Falas të modifikohen.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+                Importo nga Word
+              </button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Shabllon i ri
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero - explain templates -->
+          <div class="tpl-hero">
+            <div class="tpl-hero-ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="tpl-hero-content">
+              <div class="tpl-hero-title">Variablat magjike e bëjnë çdo gjë automatike</div>
+              <div class="tpl-hero-desc">Shkruaj <code style="font-family:var(--mono);background:#fff;padding:2px 6px;border-radius:3px;font-size:11.5px">{{klienti.emri}}</code> dhe PIKA e zëvendëson me emrin real. Përdor <code style="font-family:var(--mono);background:#fff;padding:2px 6px;border-radius:3px;font-size:11.5px">{{fatura.total}}</code> dhe vlera shfaqet auto. Funksionon në çdo shabllon: WhatsApp, Email, PDF, kontrata.</div>
+            </div>
+          </div>
+
+          <div class="tpl-layout">
+
+            <!-- Sidebar - categories -->
+            <aside class="tpl-side">
+              <div class="tpl-side-section">
+                <div class="tpl-side-label">Të gjitha</div>
+                <div class="tpl-cat active">
+                  <span class="cat-emoji">📚</span>
+                  <span>Të gjitha</span>
+                  <span class="cat-count">68</span>
+                </div>
+              </div>
+
+              <div class="tpl-side-section">
+                <div class="tpl-side-label">💼 Dokumente</div>
+                <div class="tpl-cat"><span class="cat-emoji">📋</span><span>Kuotime</span><span class="cat-count">8</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📃</span><span>Kontrata</span><span class="cat-count">12</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">🧾</span><span>Fatura</span><span class="cat-count">6</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📑</span><span>Propozime</span><span class="cat-count">5</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📊</span><span>Raporte</span><span class="cat-count">4</span></div>
+              </div>
+
+              <div class="tpl-side-section">
+                <div class="tpl-side-label">💬 Mesazhe</div>
+                <div class="tpl-cat"><span class="cat-emoji">🟢</span><span>WhatsApp</span><span class="cat-count">14</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">✉️</span><span>Email</span><span class="cat-count">9</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📱</span><span>SMS</span><span class="cat-count">3</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📸</span><span>Instagram DM</span><span class="cat-count">3</span></div>
+              </div>
+
+              <div class="tpl-side-section">
+                <div class="tpl-side-label">📣 Marketing</div>
+                <div class="tpl-cat"><span class="cat-emoji">📱</span><span>Social posts</span><span class="cat-count">6</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📧</span><span>Fushata Email</span><span class="cat-count">4</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">📋</span><span>Forms</span><span class="cat-count">5</span></div>
+              </div>
+
+              <div class="tpl-side-section">
+                <div class="tpl-side-label">🏢 Specifike</div>
+                <div class="tpl-cat"><span class="cat-emoji">🏠</span><span>Real Estate</span><span class="cat-count">7</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">🛒</span><span>eCommerce</span><span class="cat-count">6</span></div>
+                <div class="tpl-cat"><span class="cat-emoji">⚙️</span><span>Shërbime</span><span class="cat-count">4</span></div>
+              </div>
+
+              <div style="padding:14px;background:var(--bg-2);border-radius:var(--r);font-size:11.5px;color:var(--ink-soft);line-height:1.5;margin-top:8px">
+                <strong style="color:var(--ink)">💡 Variabla popullore:</strong><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{klienti.emri}}</code><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{fatura.nr}}</code><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{fatura.total}}</code><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{prona.adresa}}</code><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{prona.cmimi}}</code><br>
+                <code style="font-family:var(--mono);font-size:10.5px">{{biznesi.emri}}</code>
+              </div>
+            </aside>
+
+            <!-- Main content - templates by section -->
+            <div>
+
+              <!-- Filters -->
+              <div class="toolbar">
+                <button class="chip active">Të gjitha gjuhët</button>
+                <button class="chip">🇦🇱 Shqip (54)</button>
+                <button class="chip">🇬🇧 English (14)</button>
+                <button class="chip">⭐ Më të përdorurat</button>
+                <button class="chip" style="margin-left:auto">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  Kërko shabllone
+                </button>
+              </div>
+
+              <!-- WhatsApp templates -->
+              <div class="section-div">
+                <h3>🟢 WhatsApp Business — Meta-approved</h3>
+                <span class="sub">Gati për dërgim masiv</span>
+                <div class="line"></div>
+                <span class="sub">14 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.2-.6.1-1.7-.8-2.9-2-3.6-3.3-.2-.3-.1-.5.1-.7.4-.3.7-.7 1-1 .1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.4 5.6 2.4 1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.4 1.3 4.8L2 22l5.3-1.4C8.8 21.5 10.4 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Mirëseardhje klient i ri</div>
+                    <div class="tpl-desc">"Përshëndetje {{klienti.emri}}, mirë se erdhët! Linku i juaj…"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>47 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓ Approved</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1z"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Kujtesë pagese — miqësore</div>
+                    <div class="tpl-desc">"{{klienti.emri}}, fatura {{fatura.nr}} prej {{fatura.total}} skadon nesër"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>89 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Kuotim i dërguar</div>
+                    <div class="tpl-desc">"Kuotimi i juaj është gati: {{kuotim.link}} · Vlefshëm deri {{kuotim.deri}}"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>62 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Pagesë e konfirmuar</div>
+                    <div class="tpl-desc">"Faleminderit! Pagesa juaj prej {{shuma}} u konfirmua. Faturë…"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>134 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">🏠 Vizitë e prenotuar</div>
+                    <div class="tpl-desc">"Vizita për {{prona.adresa}} është konfirmuar për {{takimi.data}}"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>28 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">🛒 Porosi gati për dërgim</div>
+                    <div class="tpl-desc">"Porosia juaj {{porosi.nr}} është gati! Adresa: {{adresa}}"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>76 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Demo e prenotuar</div>
+                    <div class="tpl-desc">"Demoja e juaj është caktuar për {{takimi.data}} në {{takimi.ora}}"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>34 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb wa">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Rinovim afër — 30 ditë</div>
+                    <div class="tpl-desc">"Plani juaj rinovohet më {{abonim.data}}. Kursej 10% me pagesë vjetore"</div>
+                    <div class="tpl-meta">
+                      <span>🇦🇱 SQ</span><span class="dot"></span>
+                      <span>21 herë</span><span class="dot"></span>
+                      <span style="color:var(--success)">✓</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Email templates -->
+              <div class="section-div">
+                <h3>✉️ Email — transaksionale &amp; marketing</h3>
+                <span class="sub">HTML responsive për mobile</span>
+                <div class="line"></div>
+                <span class="sub">9 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb email">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Faturë me PDF</div>
+                    <div class="tpl-desc">Email me faturë attached + link pagese direkt (Stripe/IBAN)</div>
+                    <div class="tpl-meta"><span>🇦🇱🇬🇧</span><span class="dot"></span><span>247 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb email">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Welcome — klient i ri</div>
+                    <div class="tpl-desc">"Mirë se erdhët! Hapat e parë + video tutorial 90 sek"</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>89 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb email">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Newsletter — mujor</div>
+                    <div class="tpl-desc">Veçoritë e reja, tips, statistika përdorimi për klientët</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>3 dërgime</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb email">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Follow-up kuotim</div>
+                    <div class="tpl-desc">Email i butë pas 5 ditësh pa përgjigje. Ton miqësor</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>31 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Contracts -->
+              <div class="section-div">
+                <h3>📃 Kontrata &amp; Marrëveshje</h3>
+                <span class="sub">PDF profesionale me e-Signature</span>
+                <div class="line"></div>
+                <span class="sub">12 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Service Agreement KS</div>
+                    <div class="tpl-desc">Ligj Nr. 04/L-077 · TVSH 18% · GDPR + SLA</div>
+                    <div class="tpl-meta"><span>🇰🇸 KS</span><span class="dot"></span><span>16 herë</span><span class="dot"></span><span style="color:var(--brand)">e-Sign</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar thin"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Service Agreement SHQ</div>
+                    <div class="tpl-desc">Kodi Civil · TVSH 20% · Përfshin CIS fiskalizim</div>
+                    <div class="tpl-meta"><span>🇦🇱 SHQ</span><span class="dot"></span><span>11 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">NDA Bilateral</div>
+                    <div class="tpl-desc">Konfidencialitet dypalësh. Shqip + Anglisht në një</div>
+                    <div class="tpl-meta"><span>🇦🇱🇬🇧</span><span class="dot"></span><span>24 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">🏠 Marrëveshje shitje prone</div>
+                    <div class="tpl-desc">Standard për real estate · komisione, kushtet, dorëzimi</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>9 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">🏠 Kontratë qiraje</div>
+                    <div class="tpl-desc">Banesa/zyrë · Kohëzgjatja, depozita, përgjegjësitë</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>14 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb contract">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Reseller Agreement</div>
+                    <div class="tpl-desc">Për partnerë rishitës · komision i konfigurueshëm</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>3 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Real Estate templates -->
+              <div class="section-div">
+                <h3>🏠 Real Estate — specifike</h3>
+                <span class="sub">Për agjencitë e pronave</span>
+                <div class="line"></div>
+                <span class="sub">7 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb property">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Përshkrim apartamenti</div>
+                    <div class="tpl-desc">Strukturë e plotë me m², dhoma, lokacioni, çmim/m². SEO ready</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>32 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb property">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Përshkrim shtëpie/villë</div>
+                    <div class="tpl-desc">Sipërfaqe + oborr + parking + lagjja</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>18 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb property">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Forma kërkesë vizite</div>
+                    <div class="tpl-desc">Klienti zgjedh datë + ora · auto në kalendarin tënd</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>47 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb property">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Listing → Instagram post</div>
+                    <div class="tpl-desc">Format vertikal me foto + të dhëna kryesore</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>23 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- eCommerce templates -->
+              <div class="section-div">
+                <h3>🛒 eCommerce — produkt &amp; porosi</h3>
+                <span class="sub">Për dyqane online</span>
+                <div class="line"></div>
+                <span class="sub">6 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb product">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/></svg></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Përshkrim produkti</div>
+                    <div class="tpl-desc">Madhësi, ngjyrë, material · AI-generated descriptions</div>
+                    <div class="tpl-meta"><span>🇦🇱🇬🇧</span><span class="dot"></span><span>56 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb product">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Konfirmim porosie</div>
+                    <div class="tpl-desc">Email + WhatsApp · me numër porosie, total, tracking</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>342 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb product">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Abandoned cart</div>
+                    <div class="tpl-desc">Kujtesë me zbritje 10% pas 24h për cart të harruar</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>89 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb product">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Re-stock notifikim</div>
+                    <div class="tpl-desc">Njoftim klientët kur një produkt rikthehet në stok</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>34 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social posts -->
+              <div class="section-div">
+                <h3>📱 Social posts — Instagram &amp; Facebook</h3>
+                <div class="line"></div>
+                <span class="sub">6 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb social">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">📢 Lansim produkti i ri</div>
+                    <div class="tpl-desc">Square + Story formats · auto-postim</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>14 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb social">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">⭐ Testimonial klienti</div>
+                    <div class="tpl-desc">Citate me foto për social proof</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>9 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb social">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">🎁 Promocion · zbritje</div>
+                    <div class="tpl-desc">Format urgjent me data limit · CTA i fortë</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>21 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Forms -->
+              <div class="section-div">
+                <h3>📋 Forms — kapje lead-esh</h3>
+                <div class="line"></div>
+                <span class="sub">5 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb form">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Kontakti i thjeshtë</div>
+                    <div class="tpl-desc">Emër + email + mesazh · auto në CRM</div>
+                    <div class="tpl-meta"><span>🇦🇱🇬🇧</span><span class="dot"></span><span>89 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb form">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Kërkesë kuotimi</div>
+                    <div class="tpl-desc">Multi-step me detaje projekti · auto-krijon deal</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>34 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb form">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">📅 Booking takimi</div>
+                    <div class="tpl-desc">Klienti zgjedh slot të lirë · Calendly-style</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>56 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb form">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">⭐ Feedback / NPS</div>
+                    <div class="tpl-desc">Vlerësim 1-10 + komente · auto-pas blerjes</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>23 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Reports -->
+              <div class="section-div">
+                <h3>📊 Raporte — për ty &amp; kontabilistin</h3>
+                <div class="line"></div>
+                <span class="sub">4 shabllone</span>
+              </div>
+
+              <div class="tpl-grid">
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb report">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Raporti mujor financiar</div>
+                    <div class="tpl-desc">P&amp;L · cash flow · KPI · auto-gjenerohet çdo muaj</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>5 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb report">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Deklarata TVSH</div>
+                    <div class="tpl-desc">Auto-gjenerohet për ATK ose CIS · gati për dorëzim</div>
+                    <div class="tpl-meta"><span>🇦🇱🇰🇸</span><span class="dot"></span><span>12 herë</span></div>
+                  </div>
+                </div>
+
+                <div class="tpl-card">
+                  <div class="tpl-thumb report">
+                    <div class="tpl-thumb-bar headline"></div>
+                    <div class="tpl-thumb-bar long"></div>
+                    <div class="tpl-thumb-bar short"></div>
+                  </div>
+                  <div class="tpl-body">
+                    <div class="tpl-name">Performanca e shitësve</div>
+                    <div class="tpl-desc">Sa secili user mbylli, vlera, cikli mesatar</div>
+                    <div class="tpl-meta"><span>🇦🇱 SQ</span><span class="dot"></span><span>3 herë</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ════════════ WORKFLOWS PANEL ════════════ -->
+      <section class="panel" data-id="workflows">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Workflows</h1>
+              <p class="page-sub">Automatizimet që lidhin modulet — kur ndodh X (në një modul), bëj Y (në një tjetër).</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">Galeria</button>
+              <button class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Workflow i ri
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--brand-tint);color:var(--brand)">A</span>Aktive</div>
+              <div class="stat-value">14</div>
+              <div class="stat-delta">3 paused</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--success-tint);color:var(--success)">E</span>Ekzekutime sot</div>
+              <div class="stat-value">247</div>
+              <div class="stat-delta">+18% vs djeshmja</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--purple-tint);color:var(--purple)">K</span>Kohë e kursyer</div>
+              <div class="stat-value">34<span class="unit">h</span></div>
+              <div class="stat-delta">€850 në staff time</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label"><span class="stat-label-ic" style="background:var(--info-tint);color:var(--info)">S</span>Sukses rate</div>
+              <div class="stat-value">98.4<span class="unit">%</span></div>
+              <div class="stat-delta">4 dështime / 247</div>
+            </div>
+          </div>
+
+          <div class="ai-banner">
+            <div class="ai-orb"></div>
+            <div class="ai-text">
+              <strong>Sugjerim:</strong> 6 klientë janë "Qualified" prej mbi 14 ditësh pa veprim. Krijo workflow: <em>"Pas 10 ditësh pa aktivitet → kujtesë WhatsApp + njoftim te pronari"</em>.
+            </div>
+            <button class="btn btn-soft btn-sm">Krijo</button>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">🔥 Kapja lead-esh nga WhatsApp</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">📩 Mesazh WA</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">përmban "çmim"/"price"</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Tag: "Hot"</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Krijo Lead</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Notify Ardian</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>87</strong>
+              ekzekutime · 100% sukses
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">💼 Kuotim pranuar → Faturë auto</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">Quote pranuar</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Krijo Kontratë (template)</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">e-Sign</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">Pas firmosjes</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Faturë + Fiskalizo</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>23</strong>
+              ekzekutime · 96%
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">⏰ Dunning 3-hapësh — pagesa të vonuara</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">3 ditë pas afatit</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">WhatsApp kujtesë</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">+7 ditë</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Email formal</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">+14 ditë</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Pezullo plan</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>11</strong>
+              aktive · €4.2K recovered
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">🎉 Welcome sequence për klient të ri</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">Subscription krijuar</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">WhatsApp Welcome</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Task: Onboarding call</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">+7d Check-in email</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>4</strong>
+              klientë muaji
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">🏠 Real Estate: Vizitor → Lead</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">Forma "Kërkesë vizite"</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Krijo Lead</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Lidh me Pronën</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Notify agjentin</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">WA konfirmim</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>34</strong>
+              vizita prenotuar
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">🛒 eCommerce: Cart i braktisur → recovery</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">Cart braktisur 1h+</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">WA kujtesë</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">Pa veprim 24h</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Email me 10% off</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>62</strong>
+              recovery · 28% rate
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle on"></div>
+            <div class="wf-info">
+              <div class="wf-name">🔄 Subscription rinovim — 30 ditë para</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">30 ditë para skadimit</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Email + WA: rinovo me 5% off</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node cond">15d pa veprim</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Call task</span>
+              </div>
+            </div>
+            <div class="wf-stat">
+              <strong>11</strong>
+              në vijim · 91% renewal
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-toggle"></div>
+            <div class="wf-info">
+              <div class="wf-name">📸 Instagram DM "info" → auto-përgjigje</div>
+              <div class="wf-flow">
+                <span class="wf-node trigger">IG DM përmban "info"/"çmim"</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Përgjigje me kalkulator link</span>
+                <span class="wf-arr">→</span>
+                <span class="wf-node action">Lead "IG warm"</span>
+              </div>
+            </div>
+            <div class="wf-stat" style="color:var(--ink-muted)">
+              Pa aktivizuar
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════ INTEGRATIONS PANEL ════════════ -->
+      <section class="panel" data-id="integrations">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Integrime</h1>
+              <p class="page-sub">11 të lidhura · 18 të disponueshme. WhatsApp, banka lokale, fiskalizim, social media, AI.</p>
+            </div>
+            <div class="head-actions">
+              <button class="btn btn-ghost">📚 API Docs</button>
+              <button class="btn btn-primary">+ Kërko integrim</button>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <button class="chip active">Të gjitha (29)</button>
+            <button class="chip">✓ Lidhura (11)</button>
+            <button class="chip">💬 Komunikim</button>
+            <button class="chip">💳 Pagesa</button>
+            <button class="chip">🏦 Banka</button>
+            <button class="chip">📋 Fiskalizim</button>
+          </div>
+
+          <div class="section-div">
+            <h3>💬 Komunikimi me klientët</h3>
+            <span class="sub">Të gjitha derdhen në Inbox</span>
+            <div class="line"></div>
+          </div>
+
+          <div class="listings-grid" style="grid-template-columns:repeat(auto-fill, minmax(260px, 1fr))">
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:var(--wa);border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">W</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">WhatsApp Business</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Komunikim · Meta</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Mesazhe direkt, shabllone Meta-approved, broadcast deri 1000/ditë.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:11px;color:var(--ink-muted)">+383 49 555 123 · 14 shabllone</span>
+                <button class="btn btn-ghost btn-xs">Konfiguro</button>
+              </div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px">IG</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Instagram Business</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Social · Meta</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">DM, story replies, comment-to-lead, shopping tags.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:11px;color:var(--ink-muted)">@studiopika · 2.8K followers</span>
+                <button class="btn btn-ghost btn-xs">Konfiguro</button>
+              </div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#1877F2;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">f</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Facebook Pages</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Social · Meta</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Messenger, Lead Ads, Click-to-Message tracking.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:11px;color:var(--ink-muted)">PIKA · 1.4K followers</span>
+                <button class="btn btn-ghost btn-xs">Konfiguro</button>
+              </div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#EA4335;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">G</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Gmail / Workspace</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Email · Google</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Sync 2-drejtimësh, fatura nga emaili real, jo "noreply".</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:11px;color:var(--ink-muted)">ardian@getpika.io</span>
+                <button class="btn btn-ghost btn-xs">Konfiguro</button>
+              </div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#000;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">t</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">TikTok Business</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Social · Beta</div>
+                </div>
+                <button class="btn btn-primary btn-xs">+ Lidh</button>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Lead-e nga TikTok Ads, comment-to-DM, tracking.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">
+                ⚡ Po rritet shpejt në KS/AL
+              </div>
+            </div>
+
+          </div>
+
+          <div class="section-div">
+            <h3>🏦 Banka lokale &amp; pagesa</h3>
+            <span class="sub">Auto-reconciliation me IBAN</span>
+            <div class="line"></div>
+          </div>
+
+          <div class="listings-grid" style="grid-template-columns:repeat(auto-fill, minmax(260px, 1fr))">
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#635BFF;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">S</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Stripe</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Karta · 1.4% + €0.25</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Karta, Apple Pay, Google Pay, abonime auto-charge.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">€32.4K këtë muaj · 142 trans.</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#003D7C;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px">BKT</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">BKT Bank</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Bank · 🇦🇱 + 🇰🇸</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Auto-reconciliation IBAN · PayLink për klientë.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">€8.2K · 18 trans.</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#FCD400;color:#000;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:18px">R</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Raiffeisen</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Bank · 🇦🇱 + 🇰🇸</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Open Banking API · auto-match transaksionesh.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">€4.1K · 11 trans.</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#00875A;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px">PC</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">ProCredit</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Bank · 🇰🇸 Kosovë</div>
+                </div>
+                <button class="btn btn-primary btn-xs">+ Lidh</button>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Preferuar nga SMB-të në KS · auto-fetch statementesh.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">PSD2 Open Banking</div>
+            </div>
+
+          </div>
+
+          <div class="section-div">
+            <h3>📋 Fiskalizim &amp; përputhshmëri</h3>
+            <div class="line"></div>
+          </div>
+
+          <div class="listings-grid" style="grid-template-columns:repeat(auto-fill, minmax(260px, 1fr))">
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#244AA5;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">A</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">ATK Kosovë</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">🇰🇸 Detyrueshëm</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Aktiv</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Real-time transmission · deklarata TVSH auto.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">14 fatura muajt</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#E41E20;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">C</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">CIS Shqipëri</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">🇦🇱 Self.al</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Aktiv</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">NSLF/NIVF auto · QR code · libri shitjes sinkron.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">9 fatura muajt</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#212121;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px">e-S</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">e-Signature (eIDAS)</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">UE Compliant</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Aktiv</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Legal-binding me OTP, IP, certifikatë dixhitale.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">23 kontrata firmosur</div>
+            </div>
+
+          </div>
+
+          <div class="section-div">
+            <h3>🤖 AI &amp; produktivitet</h3>
+            <div class="line"></div>
+          </div>
+
+          <div class="listings-grid" style="grid-template-columns:repeat(auto-fill, minmax(260px, 1fr))">
+
+            <div class="card" style="padding:18px;background:linear-gradient(135deg, var(--brand-tint), var(--purple-tint));border-color:var(--brand-tint-2)">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:linear-gradient(135deg,#F0A04B,#C97E29);border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">A</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Claude AI</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Anthropic · Sonnet 4.6</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Auto-përgjigje WA · klasifikim lead-esh · OCR fatura.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.08);font-size:11px;color:var(--ink-muted)">12K tokens/ditë</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#4285F4;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">📅</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Google Calendar</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Produktivitet</div>
+                </div>
+                <span class="badge badge-success"><span class="pip"></span>Lidhur</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Auto-shtim takimesh · reminder për follow-up.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">Calendly link i integruar</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#4A154B;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">#</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Slack</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">Team</div>
+                </div>
+                <button class="btn btn-primary btn-xs">+ Lidh</button>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Njoftime për shitje, kuotime, fatura të vonuara.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">Për ekipe që rriten</div>
+            </div>
+
+            <div class="card" style="padding:18px">
+              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+                <div style="width:42px;height:42px;background:#FF4A00;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px">Z</div>
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:600">Zapier</div>
+                  <div style="font-size:11px;color:var(--ink-muted)">5K+ apps</div>
+                </div>
+                <button class="btn btn-ghost btn-xs">+ Lidh</button>
+              </div>
+              <div style="font-size:12.5px;color:var(--ink-soft);line-height:1.5;min-height:36px">Lidhje me 5000+ aplikacione përmes triggers.</div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-muted)">Webhook + API i hapur</div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
